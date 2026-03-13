@@ -1,4 +1,4 @@
-# 🚀 Sistema de Inventario Cecosesola Premium
+# 🚀 Sistema de Inventario Cecosesola 
 
 ¡Bienvenido al repositorio oficial del **Sistema de Inventario Cecosesola**! Un proyecto de software robusto, estético e inteligente diseñado para optimizar el control de víveres en tiempo real.
 
