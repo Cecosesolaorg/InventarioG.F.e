@@ -1,0 +1,2 @@
+# InventarioG.F.e
+inventarios
