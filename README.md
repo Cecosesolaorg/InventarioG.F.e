@@ -59,5 +59,5 @@ Este proyecto es el resultado de una dedicación constante y un desarrollo itera
 > [!NOTE]
 > **Estado Actual:** El proyecto se encuentra en fase de refinamiento de sincronización entre dispositivos y optimización de base de datos en nube.
 
-**Desarrollado con pasión para Cecosesola.**
+**Desarrollado x Cecosesola.**
 _Construyendo confianza en la diversidad._
