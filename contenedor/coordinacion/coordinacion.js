@@ -483,6 +483,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const n = prompt("Nuevo nombre:", p);
                 if (n && n.trim()) {
                     activeProducts[idx] = n.trim().toUpperCase();
+                    activeProducts.sort((a, b) => a.localeCompare(b, undefined, { sensitivity: 'base' }));
                     renderProductList();
                     saveProducts();
                 }
@@ -518,6 +519,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const n = prompt("Nombre del nuevo producto:");
         if (n && n.trim()) {
             activeProducts.push(n.trim().toUpperCase());
+            activeProducts.sort((a, b) => a.localeCompare(b, undefined, { sensitivity: 'base' }));
             renderProductList(); // Actualizar UI de inmediato
             saveProducts();
         }

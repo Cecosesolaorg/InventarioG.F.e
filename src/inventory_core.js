@@ -1,6 +1,12 @@
 window.InventoryCore = {
     render: function (inventoryBody, products, inventoryData, searchTerm, aisleId, options = {}) {
         if (!inventoryBody) return;
+
+        // Ensure products are sorted alphabetically (modifies the reference)
+        if (Array.isArray(products)) {
+            products.sort((a, b) => a.localeCompare(b, undefined, { sensitivity: 'base' }));
+        }
+
         inventoryBody.innerHTML = '';
 
         const countedEl = document.getElementById('counted-total');

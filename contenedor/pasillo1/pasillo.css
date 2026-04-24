@@ -626,51 +626,88 @@
 }
 
 @media (max-width: 480px) {
+    .pasillo-header {
+        padding: 1rem 0.5rem;
+    }
+
     .header-info {
-        flex-direction: column;
-        gap: 0.25rem;
-        text-align: left;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.8rem;
+        font-size: 0.55rem;
     }
 
     .aisle-title {
-        font-size: 1.4rem;
-    }
-
-    /* Calculator Scaling */
-    .image-style-modal {
-        padding: 1rem;
-        border-radius: 1.5rem;
-    }
-
-    .image-style-header h3 {
-        font-size: 1.1rem;
-    }
-
-    .display-val {
-        font-size: 2rem;
-    }
-
-    .num-btn,
-    .op-btn {
-        padding: 0.8rem;
         font-size: 1.2rem;
     }
 
-    .btn-sumar-directo {
-        padding: 1rem;
-        font-size: 1.1rem;
+    .actions-bar {
+        padding: 0.8rem 0.5rem;
     }
 
-    .inventory-table-container {
-        overflow-x: auto;
+    .button-group {
+        flex-direction: column;
+        width: 100%;
+        gap: 0.8rem !important;
+    }
+
+    .toggle-group {
+        width: 100%;
+        justify-content: center;
+        padding: 0.6rem;
+    }
+
+    .action-btn {
+        width: 100%;
+        padding: 0.8rem;
+        font-size: 0.85rem;
     }
 
     .inventory-table th,
     .inventory-table td {
-        padding: 0.75rem 1rem;
+        padding: 0.8rem 0.5rem;
+        font-size: 0.75rem;
+    }
+
+    .col-qty {
+        width: 70px;
+    }
+
+    .col-diff {
+        width: 50px;
+    }
+
+    .product-name {
         font-size: 0.8rem;
     }
+
+    /* Calculator Scaling */
+    .image-style-modal {
+        width: 95%;
+        padding: 0.8rem;
+    }
+
+    .display-val {
+        font-size: 1.8rem;
+    }
+
+    .num-btn {
+        padding: 0.8rem 0.5rem;
+        font-size: 1.2rem;
+    }
 }
+
+@media (max-width: 360px) {
+    .header-info {
+        gap: 0.4rem;
+    }
+    
+    .aisle-title {
+        font-size: 1.1rem;
+    }
+}
+
 
 /* Premium Toggle Switch */
 .toggle-group {

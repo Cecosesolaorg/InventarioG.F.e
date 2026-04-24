@@ -71,6 +71,9 @@ window.ExportApp = {
         // 5. Datos
         const isFullList = document.getElementById('fullListToggle')?.checked;
         const listToExport = products.filter(p => isFullList || (inventoryData[p] && inventoryData[p].checkState > 0));
+        
+        // Sort products alphabetically
+        listToExport.sort((a, b) => a.localeCompare(b, undefined, { sensitivity: 'base' }));
 
         listToExport.forEach((p, idx) => {
             const data = inventoryData[p] || { qty: 0, history: "0", checkState: 0, redQty: null };

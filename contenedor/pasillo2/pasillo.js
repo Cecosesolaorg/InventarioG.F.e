@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         const finalP = n.trim().toUpperCase();
                         const idx = productsList.indexOf(p);
                         if (idx !== -1) {
-                            productsList[idx] = finalP;
+                            productsList[idx] = finalP; productsList.sort((a, b) => a.localeCompare(b));
                             inventoryData[finalP] = inventoryData[p];
                             delete inventoryData[p];
                             localStorage.setItem('inventoryData', JSON.stringify(inventoryData));
@@ -101,7 +101,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (document.getElementById('downloadBtn')) document.getElementById('downloadBtn').onclick = () => window.ExportApp.downloadAisle(aisleTitle, responsable, companero, productsList, inventoryData);
     if (document.getElementById('addProductBtn')) document.getElementById('addProductBtn').onclick = () => {
         window.InventoryCore.openAddProductModal((fn) => {
-            productsList.push(fn);
+            productsList.push(fn); productsList.sort((a, b) => a.localeCompare(b));
             localStorage.setItem(`productsList_${aisleId}`, JSON.stringify(productsList));
             renderTable();
         });
@@ -155,3 +155,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
     renderTable();
 });
+
